@@ -1,0 +1,12 @@
+---
+ref: pagerduty
+name: pagerduty
+description: Packs which creates and updates pagerduty tickets
+version: 1.0.0
+python_versions:
+  - "3"
+author: karamveer kaur
+email: karamveer@bitovi.com
+contributors:
+  - karamveer@bitovi.com
+

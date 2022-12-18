@@ -1,0 +1,19 @@
+---
+name: pagerduty-test
+description: Testing pagerduty ticket creation
+enabled: true
+
+trigger:
+        type: "core.st2.webhook"
+        parameters:
+            url: "vz-pack-training-internal"
+
+criteria:
+    trigger.body.request:
+        type: "equals"
+        pattern : "create"
+
+action:
+  ref: mock_pagerduty.create_ticket
+  parameters:
+    message: " Ticket is created for pagerduty incident"
