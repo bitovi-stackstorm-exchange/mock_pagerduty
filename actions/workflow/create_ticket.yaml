@@ -9,7 +9,4 @@ input:
 tasks:
   notify:
     action: core.echo
-    input:
-      message: |
-        Got data from Jira
 

@@ -11,7 +11,7 @@ trigger:
 criteria:
   trigger.body.webhookEvent: 
     type: regex
-    pattern: "jira:issue_(created|updated)"
+    pattern: "pagerduty:issue_(created|updated)"
 
 action:
     ref: mock_pagerduty.create_ticket
