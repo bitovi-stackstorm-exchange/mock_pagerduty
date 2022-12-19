@@ -9,11 +9,11 @@ trigger:
             url: "vz-pack-training-internal"
 
 criteria:
-    trigger.body.request:
-        type: "equals"
-        pattern : "create"
+  trigger.body.webhookEvent: 
+    type: regex
+    pattern: "jira:issue_(created|updated)"
 
 action:
-  ref: mock_pagerduty.create_ticket
-  parameters:
-    message: " Ticket is created for pagerduty incident"
+    ref: mock_pagerduty.create_ticket
+    parameters:
+      parameter_body: "{{trigger.body}}"

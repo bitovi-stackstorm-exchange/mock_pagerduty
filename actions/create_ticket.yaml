@@ -5,15 +5,9 @@ runner_type: orquesta
 entry_point: workflows/create_ticket.yaml
 enabled: true
 parameters:
-    name:
-        type: "string"
-        description: "user name"
-        required: true
-        position: 0
-        default: "{{config_context.pagerduty_name}}"
-    request:
-        type: "string"
-        description: "request"
-        required: true
-        position: 1
-        default: "{{config_context.pagerduty_request}}"
+  parameter_body:
+    required: true
+    type: object
+  request:
+    type: string
+    default: "{{config_context.pagerduty_request}}"

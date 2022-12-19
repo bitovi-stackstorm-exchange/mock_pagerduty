@@ -1,9 +1,5 @@
 ---
-  pagerduty_name:
-    description: "Pagerduty name"
-    default: "Karam"
-    type: "string"
-  pagerduty_request:
-    description: "Pagerduty request"
-    default: "ticket has been created."
-    type: "string"
+pagerduty_request:
+  description: "Pagerduty request"
+  default: "pagerduty-ticket-created"
+  type: "string"
