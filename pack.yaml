@@ -1,6 +1,6 @@
 ---
-ref: pagerduty
-name: pagerduty
+ref: mock_pagerduty
+name: mock_pagerduty
 description: Packs which creates and updates pagerduty tickets
 version: 1.0.0
 python_versions:

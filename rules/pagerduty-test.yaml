@@ -1,12 +1,13 @@
 ---
 name: pagerduty-test
+pack: mock_pagerduty
 description: Testing pagerduty ticket creation
 enabled: true
 
 trigger:
-        type: "core.st2.webhook"
-        parameters:
-            url: "vz-pack-training-internal"
+  type: "core.st2.webhook"
+  parameters:
+    url: "vz-pack-training-internal"
 
 criteria:
   trigger.body.webhookEvent: 
@@ -14,6 +15,6 @@ criteria:
     pattern: "pagerduty:issue_(created|updated)"
 
 action:
-    ref: mock_pagerduty.create_ticket
-    parameters:
-      parameter_body: "{{trigger.body}}"
+  ref: mock_pagerduty.create_ticket
+  parameters:
+    parameter_body: "{{trigger.body}}"
