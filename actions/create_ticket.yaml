@@ -3,7 +3,7 @@ name: create_ticket
 pack: mock_pagerduty
 description: Create pagerduty tickets
 runner_type: orquesta
-entry_point: workflows/create_ticket.yaml
+entry_point: workflow/create_ticket.yaml
 enabled: true
 parameters:
   parameter_body:
