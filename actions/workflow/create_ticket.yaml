@@ -12,4 +12,5 @@ tasks:
     input:
       message: |
         Received pagerduty WebHook.
-
+        <% ctx().parameter_body %>
+        <% ctx().request %>

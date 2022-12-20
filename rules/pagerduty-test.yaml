@@ -17,4 +17,4 @@ criteria:
 action:
   ref: mock_pagerduty.create_ticket
   parameters:
-    parameter_body: "{{trigger.body}}"
+    parameter_body: "{{ trigger }}"
