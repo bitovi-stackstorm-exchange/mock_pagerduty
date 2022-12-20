@@ -9,4 +9,7 @@ input:
 tasks:
   notify:
     action: core.echo
+    input:
+      message: |
+        Received pagerduty WebHook.
 
